@@ -55,7 +55,7 @@ app.layout = html.Div([
 ])
 
 
-@app.callback(Output('my_graph', 'figure'), [Input('my_ticker_symbol', 'value'),Input('my_date_picker', 'start_date'),Input('my_date_picker', 'end_date')])
+@app.callback(Output('my_graph', 'figure'),[Input('submit-button', 'n_clicks')], [State('my_ticker_symbol', 'value'),State('my_date_picker', 'start_date'),State('my_date_picker', 'end_date')])
 def update_graph(n_clicks, stock_ticker, start_date, end_date):
     # Getting the data (Need to reformat the data to be fed into the pandas datareader)
     start = datetime.strptime(start_date[:10], '%Y-%m-%d')
