@@ -18,7 +18,7 @@ for tic in nsdq.index:
 app.layout = html.Div([
     html.H1('Stock Ticker Dashboard'),
     html.Div([
-        html.H3('Select stock symbols:', style={'paddingRight':'30px'}),
+        html.H3('Select ticker symbols:', style={'paddingRight':'30px'}),
         dcc.Dropdown(
             id='my_ticker_symbol',
             options=options,
